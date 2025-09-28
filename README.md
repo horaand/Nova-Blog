@@ -2,7 +2,7 @@
 
 A minimal, offline blog application built with **vanilla HTML, CSS, and JavaScript**.  
 No frameworks, no libraries, no servers, no external calls.  
-All content is rendered from local markdown. Licensed under **Unlicense** (public domain).
+All content is rendered from local markdown.
 
 ---
 
