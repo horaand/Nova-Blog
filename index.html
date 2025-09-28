@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d0f1a" />
+  <title>Nova — Blog</title>
+  <!-- SPDX-License-Identifier: Unlicense -->
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- decorative animated background -->
+  <div class="bg">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="grain"></div>
+  </div>
+
+  <header class="site">
+    <h1 class="brand">Nova<span>Blog</span></h1>
+    <nav class="nav">
+      <a href="#/" class="nav__link" data-link>Home</a>
+      <a href="#/about" class="nav__link" data-link>About</a>
+      <button id="toggleTheme" class="chip" title="Toggle theme">☀️/🌙</button>
+    </nav>
+  </header>
+
+  <main id="app" class="wrap">
+    <!-- HOME / LIST -->
+    <section id="home" class="view hidden">
+      <div class="tools card">
+        <input id="q" class="input" type="search" placeholder="Search articles…" />
+        <div id="tags" class="tags" aria-label="Filter by tag"></div>
+      </div>
+      <ul id="list" class="list"></ul>
+      <div id="pager" class="pager"></div>
+    </section>
+
+    <!-- POST -->
+    <article id="post" class="view hidden">
+      <div class="progress"><div id="bar" class="bar"></div></div>
+      <header class="hero card">
+        <h2 id="pTitle" class="title"></h2>
+        <p class="meta"><span id="pMeta"></span></p>
+        <div class="post__tools">
+          <button id="btnBack" class="btn">← Back</button>
+          <button id="btnCopyLink" class="btn">Copy link</button>
+          <button id="btnShare" class="btn">Share</button>
+        </div>
+      </header>
+      <div id="pBody" class="prose card"></div>
+      <footer class="foot">
+        <a href="#/" class="btn">← All posts</a>
+      </footer>
+    </article>
+
+    <!-- ABOUT -->
+    <section id="about" class="view hidden">
+      <div class="card prose">
+        <h2>About this blog</h2>
+        <p>Nova Blog is a hand-crafted, dependency-free demo. Content is rendered from markdown stored locally. All code is original and free (Unlicense).</p>
+        <h3>Features</h3>
+        <ul>
+          <li>Search & tag filters</li>
+          <li>Markdown rendering (headings, lists, links, code)</li>
+          <li>Hash router (<code>#/post/&lt;slug&gt;</code>)</li>
+          <li>Reading progress bar & reading time</li>
+          <li>Light/Dark theme with persistence</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site__foot">
+    <p></p>
+  </footer>
+</body>
+</html>
